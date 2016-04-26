@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 # bin/compile <build-dir> <cache-dir> <env-dir>
 
+exec 2>&1
+set -x
+pwd
+echo $0 $*
+
+
 set -e
 set -o pipefail   # don't ignore exit codes when piping output
 set -o nounset    # fail on unset variables
